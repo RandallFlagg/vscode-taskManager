@@ -1,0 +1,50 @@
+{
+    "name": "taskmanager",
+    "displayName": "taskManager",
+    "description": "This is extension should be used to handle task management",
+    "version": "0.0.1",
+    "publisher": "ElGenius",
+    "engines": {
+        "vscode": "^1.18.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "*"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.taskManager",
+                "title": "Task Manager"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42",
+        "@types/glob": "^5.0.33",
+        "@types/request": "^2.0.8",
+        "@types/request-promise": "^4.1.39",
+        "@types/uuid": "^3.4.3"
+    },
+    "dependencies": {
+        "@types/mkdirp": "^0.5.1",
+        "glob": "^7.1.2",
+        "mkdirp": "^0.5.1",
+        "request": "^2.83.0",
+        "request-promise": "^4.2.2",
+        "uuid": "^3.1.0"
+    }
+}
