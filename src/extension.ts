@@ -20,7 +20,7 @@ export async function activate(context: vscode.ExtensionContext) {
     //validating that user is authenticated
     let creds: any = await fileManager.checkAuthFileExist(path);
     if (!creds)
-        await vscode.window.showInformationMessage('To use task manager please authenticate through pressing ctrl + shift + p then type "task manager" and then click enter');
+        await vscode.window.showInformationMessage('To use task manager please authenticate through pressing Ctrl + Shift + p then type "task manager" and then click enter');
 
     let timeoutTime = 900000;
     let timeoutClosure = async () => {
